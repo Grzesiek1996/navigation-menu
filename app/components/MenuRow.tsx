@@ -40,7 +40,6 @@ export const MenuRow: React.FC<MenuRowProps> = ({
 
   const isDragging = item.id === activeId;
   const showBlueLine = isOver && !isDragging;
-  const hasChildren = Boolean(item.children);
 
   return (
     <div
