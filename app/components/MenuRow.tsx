@@ -161,9 +161,3 @@ export const MenuRow: React.FC<MenuRowProps> = ({
     </div>
   );
 };
-
-{
-  /* <div className="py-4 px-6">
-<AddMenuItemForm onSubmitForm={() => {}} onCancel={() => {}} />
-</div>  */
-}
