@@ -95,11 +95,11 @@ export const calculateLinePosition = ({
   const overBottom = overTop + constHeight;
 
   const isBottomLine =
-    currentCenter >= overMiddle && currentCenter < overBottom;
+    currentCenter >= overMiddle && currentCenter <= overBottom;
   const isChildren =
     delta.x + active.rect.current.initial.left > over.rect.left + 30;
 
-  if (currentCenter < overMiddle && currentCenter > overTop) {
+  if (currentCenter <= overMiddle && currentCenter >= overTop) {
     return HoverPosition.Top;
   }
 
@@ -107,11 +107,7 @@ export const calculateLinePosition = ({
     return HoverPosition.BottomChildren;
   }
 
-  if (isBottomLine) {
-    return HoverPosition.Bottom;
-  }
-
-  return null;
+  return HoverPosition.Bottom;
 };
 
 export const findMenuItemById = (
